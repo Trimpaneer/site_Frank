@@ -11,7 +11,7 @@ function Home() {
             style={{ backgroundImage: `url(${homePageBg})` }}
         >
             {/* Overlay for better text readability */}
-            <div className="absolute inset-0 bg-black/10 pointer-events-none"></div>
+            <div className="absolute inset-x-0 top-0 min-h-screen bg-black/10 pointer-events-none"></div>
 
             {/* Title Section */}
             <div className="relative pt-12 pl-8 xl:pt-20 xl:pl-16 z-10 mb-8 xl:mb-12">
@@ -25,11 +25,11 @@ function Home() {
             </div>
 
             {/* Grid Layout for Cards */}
-            <div className="relative z-10 flex flex-col gap-8 xl:grid xl:gap-12 p-6 xl:px-16 xl:pb-16 xl:pt-4 mt-0 xl:mt-4 w-full max-w-[90rem] mx-auto xl:grid-cols-5">
+            <div className="relative z-10 flex flex-col gap-4 md:grid md:gap-10 lg:gap-12 p-6 md:px-12 lg:px-14 xl:px-16 md:pb-12 lg:pb-14 xl:pb-16 md:pt-3 lg:pt-3.5 xl:pt-4 mt-0 md:mt-3 lg:mt-3.5 xl:mt-4 w-full max-w-[90rem] mx-auto md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5 lg:auto-rows-auto">
                 {/* Left Column - Social + About */}
-                <div className="contents xl:col-span-2 xl:flex xl:flex-col xl:justify-between gap-8 xl:gap-12 w-full h-full">
+                <div className="contents md:flex md:flex-col md:col-span-2 lg:col-span-2 xl:col-span-2 md:justify-between lg:justify-start xl:justify-between gap-4 md:gap-10 lg:gap-12 w-full">
                     {/* Social Links Card */}
-                    <div className="order-1 group relative flex flex-col items-center justify-center w-full h-[35vh] xl:h-[40vh]">
+                    <div className="order-1 md:order-none group relative flex flex-col items-center justify-center w-full h-[35vh] md:h-[35vh] lg:h-[38vh] xl:h-[40vh]">
                         <div className="relative z-10 text-center w-full flex flex-col items-center justify-center h-full p-4">
                             <p className="text-2xl font-serif text-white tracking-wider mb-4">Réseaux</p>
                             <div className="flex flex-col items-center gap-6 w-full">
@@ -117,7 +117,7 @@ function Home() {
                     {/* À propos Card */}
                     <Link
                         to="/about"
-                        className="order-3 group relative flex flex-col items-center justify-end w-full h-[35vh] xl:h-[70vh] rounded-sm overflow-hidden cursor-pointer transition-transform duration-500 hover:-translate-y-1 shadow-xl"
+                        className="order-3 md:order-none group relative flex flex-col items-center justify-end w-full h-[35vh] md:h-[40vh] lg:h-[45vh] xl:h-[70vh] -mt-8 md:mt-0 rounded-sm overflow-hidden cursor-pointer transition-transform duration-500 hover:-translate-y-1 shadow-xl"
                     >
                         <div
                             className="absolute inset-0 bg-cover bg-bottom transition-transform duration-700 group-hover:scale-105"
@@ -134,11 +134,11 @@ function Home() {
                 </div>
 
                 {/* Right Column - Gallery + Contact */}
-                <div className="contents xl:col-span-3 xl:flex xl:flex-col xl:justify-between gap-8 xl:gap-12 w-full h-full">
+                <div className="contents md:flex md:flex-col md:col-span-2 lg:col-span-3 xl:col-span-3 md:justify-between lg:justify-start xl:justify-between gap-4 md:gap-10 lg:gap-12 w-full lg:min-h-screen xl:min-h-0">
                     {/* Carousel as Gallery Link */}
                     <Link
                         to="/galerie"
-                        className="order-2 group relative w-full h-[45vh] xl:h-auto cursor-pointer transition-transform duration-500 hover:-translate-y-1 shadow-xl"
+                        className="order-2 md:order-none group relative w-full h-[55vh] md:h-[60vh] lg:h-[50vh] xl:h-auto cursor-pointer transition-transform duration-500 hover:-translate-y-1 shadow-xl"
                     >
                         <div className="relative w-full h-full transition-transform duration-700 group-hover:scale-[1.02]">
                             <Carousel />
@@ -148,7 +148,7 @@ function Home() {
                     {/* Contact Card */}
                     <Link
                         to="/contact"
-                        className="order-4 group relative flex flex-col items-center justify-center w-full h-[35vh] xl:h-[20vh] rounded-sm overflow-hidden cursor-pointer transition-transform duration-500 hover:-translate-y-1 shadow-xl border border-white/10 bg-black/20 backdrop-blur-sm"
+                        className="order-4 md:order-none group relative flex flex-col items-center justify-center w-full h-[35vh] md:h-[25vh] lg:h-[22vh] xl:h-[20vh] rounded-sm overflow-hidden cursor-pointer transition-transform duration-500 hover:-translate-y-1 shadow-xl border border-white/10 bg-black/20 backdrop-blur-sm"
                     >
                         <div className="relative z-10 text-center">
                             <div className="flex items-center justify-center gap-2 mb-2">
