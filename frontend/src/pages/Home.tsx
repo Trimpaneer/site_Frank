@@ -142,7 +142,7 @@ function Home() {
                     className="group relative flex flex-col items-center justify-end w-full h-[35vh] xl:h-[90vh] xl:col-span-2 rounded-sm overflow-hidden cursor-pointer transition-transform duration-500 hover:-translate-y-1 shadow-xl"
                 >
                     <div
-                        className="absolute inset-0 bg-cover bg-top transition-transform duration-700 group-hover:scale-105"
+                        className="absolute inset-0 bg-cover bg-bottom transition-transform duration-700 group-hover:scale-105"
                         style={{ backgroundImage: `url(${aboutBg})` }}
                     ></div>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
