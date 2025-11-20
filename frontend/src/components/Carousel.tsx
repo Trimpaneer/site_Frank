@@ -22,17 +22,24 @@ function Carousel() {
     }, []);
 
     return (
-        <div className="relative w-full h-[60vh] xl:h-[95vh] rounded-sm overflow-hidden shadow-xl">
-            {images.map((src, index) => ( // Preload/Render all images but control opacity
+        <div className="relative w-full max-h-[100vh] rounded-sm overflow-hidden shadow-xl">
+            {/* Spacer image to define natural aspect ratio */}
+            <img
+                src={images[0]}
+                alt="Spacer"
+                className="w-full h-auto max-h-[100vh] opacity-0 pointer-events-none px-8"
+            />
+
+            {images.map((src, index) => (
                 <div
                     key={index}
-                    className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === currentIndex ? 'opacity-100' : 'opacity-0'
+                    className={`absolute inset-0 px-8 transition-opacity duration-1000 ease-in-out ${index === currentIndex ? 'opacity-100' : 'opacity-0'
                         }`}
                 >
                     <img
                         src={src}
                         alt={`Slide ${index + 1}`}
-                        className="w-full h-full object-cover object-top"
+                        className="w-full h-full object-cover rounded-sm"
                     />
                     {/* Optional overlay removed to show full image clearly */}
                 </div>
