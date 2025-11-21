@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 function Contact() {
     const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
@@ -34,7 +35,12 @@ function Contact() {
     };
 
     return (
-        <div className='min-h-screen w-full bg-neutral-900 text-white p-6 flex flex-col items-center'>
+        <main className='min-h-screen w-full bg-neutral-900 text-white p-6 flex flex-col items-center'>
+            <SEO
+                title="Contact Viskled - Réservez votre séance photo"
+                description="Contactez Viskled pour vos projets photo. Devis, informations et réservations pour portraits, cosplay et événements."
+                keywords="Contact, Devis, Réservation, Photographe, Email"
+            />
             <div className='w-full max-w-4xl flex justify-between items-center mb-12'>
                 <h1 className='text-4xl font-bold'>Me Contacter</h1>
                 <Link to="/" className="text-gray-400 hover:text-white transition-colors tracking-widest uppercase text-sm border-b border-transparent hover:border-white pb-1 flex items-center gap-2">
@@ -120,7 +126,7 @@ function Contact() {
                     </form>
                 )}
             </div>
-        </div>
+        </main>
     );
 }
 

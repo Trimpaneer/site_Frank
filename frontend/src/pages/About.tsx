@@ -1,10 +1,16 @@
 import { Link } from 'react-router-dom';
 import '../App.css';
+import SEO from '../components/SEO';
 import portraitImg from '../assets/PhotoFille.png';
 
 function About() {
     return (
-        <div className="min-h-screen bg-black text-white p-8 md:p-16 flex flex-col items-center justify-center">
+        <main className="min-h-screen bg-black text-white p-8 md:p-16 flex flex-col items-center justify-center">
+            <SEO
+                title="À propos de Viskled - Photographe Portrait & Cosplay"
+                description="Découvrez l'univers de Viskled, photographe passionné par le cosplay, le portrait et l'événementiel. Une approche authentique pour sublimer vos moments."
+                keywords="À propos, Photographe, Viskled, Biographie, Portrait, Cosplay"
+            />
             <div className="w-full max-w-5xl">
                 <div className="flex justify-between items-center mb-12 border-b border-white/10 pb-6">
                     <h1 className="text-4xl md:text-6xl font-serif tracking-wide">À propos</h1>
@@ -60,7 +66,7 @@ function About() {
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
     );
 }
 

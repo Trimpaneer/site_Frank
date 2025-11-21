@@ -1,15 +1,21 @@
 import { Link } from 'react-router-dom';
 import '../App.css';
 import Carousel from '../components/Carousel';
+import SEO from '../components/SEO';
 import homePageBg from '../assets/HomePageBackground.jpg';
 import aboutBg from '../assets/PhotoFille.png';
 
 function Home() {
     return (
-        <div
+        <main
             className="min-h-screen w-full bg-cover bg-center bg-no-repeat relative"
             style={{ backgroundImage: `url(${homePageBg})` }}
         >
+            <SEO
+                title="Viskled Photography - Portrait, Cosplay & Événementiel"
+                description="Photographe passionné spécialisé dans le portrait, le cosplay et l'événementiel. Capturez vos moments uniques avec Viskled Photography."
+                keywords="Photographe, Portrait, Cosplay, Événementiel, Shooting, Photo, Viskled"
+            />
             {/* Overlay for better text readability */}
             <div className="absolute inset-x-0 top-0 min-h-screen bg-black/10 pointer-events-none"></div>
 
@@ -165,7 +171,7 @@ function Home() {
                     </Link>
                 </div>
             </div>
-        </div>
+        </main>
     );
 }
 

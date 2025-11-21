@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://viskled-photos.com/sitemap.xml

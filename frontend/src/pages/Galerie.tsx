@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import '../App.css';
+import SEO from '../components/SEO';
 
 // Import images
 import img1 from '../assets/Galerie/Capture d\'écran 2025-11-19 123725.png';
@@ -13,7 +14,12 @@ const images = [img1, img2, img3, img4, img5, img6];
 
 function Galerie() {
     return (
-        <div className="min-h-screen bg-black text-white p-8 md:p-16">
+        <main className="min-h-screen bg-black text-white p-8 md:p-16">
+            <SEO
+                title="Galerie Viskled - Portfolio Cosplay & Portrait"
+                description="Explorez la galerie photo de Viskled. Des portraits saisissants, des cosplays détaillés et des moments d'événements inoubliables."
+                keywords="Galerie, Photos, Portfolio, Cosplay, Portrait, Images"
+            />
             <div className="flex justify-between items-center mb-12">
                 <h1 className="text-4xl md:text-6xl font-serif tracking-wide">Galerie</h1>
                 <Link to="/" className="text-gray-400 hover:text-white transition-colors tracking-widest uppercase text-sm border-b border-transparent hover:border-white pb-1 flex items-center gap-2">
@@ -36,7 +42,7 @@ function Galerie() {
                     </div>
                 ))}
             </div>
-        </div>
+        </main>
     );
 }
 
