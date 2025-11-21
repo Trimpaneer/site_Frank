@@ -22,7 +22,7 @@ function Carousel() {
     }, []);
 
     return (
-        <div className="relative w-full max-h-[100vh] rounded-sm overflow-hidden shadow-xl">
+        <div className="relative w-full max-h-[100vh] overflow-hidden shadow-xl">
             {/* Spacer image to define natural aspect ratio */}
             <img
                 src={images[0]}
@@ -39,7 +39,7 @@ function Carousel() {
                     <img
                         src={src}
                         alt={`Slide ${index + 1}`}
-                        className="w-full h-full object-cover rounded-sm"
+                        className="w-full h-full object-cover rounded-lg"
                     />
                     {/* Optional overlay removed to show full image clearly */}
                 </div>
